@@ -1,14 +1,17 @@
-import javax.swing.JFrame;
-public class LargeJFrame extends JFrame{
-	LargeFrame(String title){
-		setTitle(title);
-		setLocation(0,0);
-		setSize(1000,1000);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	}
-	public static void main(String[] args){
-		LargeFrame f = new LargeFrame("ALOHA");
-		f.setVisible(true);
-	}
-}
-
+ import javax.swing.JFrame;
+  
+  public class LargeFrame extends JFrame {
+    // data
+    // method
+    LargeFrame(String title) {
+      setTitle(title);
+      setLocation(0, 0);
+      setSize(1000, 1000);
+      setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+    // main
+    public static void main(String[] args) {
+      LargeFrame frame = new LargeFrame("ALOHA");
+      frame.setVisible(true);
+    }
+  }
