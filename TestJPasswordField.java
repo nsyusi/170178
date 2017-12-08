@@ -8,25 +8,25 @@ import java.awt.*;
 public class TestJPasswordField extends JFrame{
 	TestJPasswordField(String title){
 		setTitle(title);
-		setBounds(0,0,500,500);
+		setBounds(500,500,500,500);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		JPanel p = new JPanel();
 		JLabel l1 = new JLabel("mail");
 		JLabel l2 = new JLabel("pass");
+		JTextField tf = new JTextField("",20);
+		JPasswordField pf = new JPasswordField("",10);
 
+		p.add(tf);
+		p.add(l1);
 
-		JTextField tf = new JTextField("",10);
-		JPasswordField pf = new JPasswordField("Window");
+		p.add(pf);
+		p.add(l2);
 
-		p.add(tf,BorderLayout.CENTER);
-		p.add(l1,BorderLayout.CENTER);
-
-		p.add(pf,BorderLayout.CENTER);
-		p.add(l2,BorderLayout.CENTER);
+		p.setLayout(new GridLayout(2,2));
 
 		Container cp = getContentPane();
-		cp.add(p,BorderLayout.CENTER);
+		cp.add(p,BorderLayout.NORTH);
 	}
 
 	public static void main(String[] args){
