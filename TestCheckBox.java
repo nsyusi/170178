@@ -6,33 +6,28 @@ import javax.swing.JLabel;
 import javax.swing.JCheckBox;
 import java.awt.*;
 
-public class TestJPasswordField extends JFrame{
-	TestJPasswordField(String title){
+public class TestCheckBox extends JFrame{
+	TestCheckBox(String title){
 		setTitle(title);
 		setBounds(500,500,500,500);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		JPanel p = new JPanel();
-		JLabel l1 = new JLabel("mail");
-		JLabel l2 = new JLabel("pass");
-		JTextField tf = new JTextField("",20);
-		JPasswordField pf = new JPasswordField("",10);
 
+		JCheckBox c1 = new JCheckBox("A");
+		JCheckBox c2 = new JCheckBox("B");
+		JCheckBox c3 = new JCheckBox("C");
 
-		p.add(tf);
-		p.add(l1);
-
-		p.add(pf);
-		p.add(l2);
-
-		p.setLayout(new GridLayout(2,2));
+		p.add(c1);
+		p.add(c2);
+		p.add(c3);
 
 		Container cp = getContentPane();
 		cp.add(p,BorderLayout.NORTH);
 	}
 
 	public static void main(String[] args){
-		TestJPasswordField t = new TestJPasswordField("Window");
+		TestCheckBox t = new TestCheckBox("Window");
 		t.setVisible(true);
 	}
 }
