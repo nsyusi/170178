@@ -10,8 +10,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Fukushu extends JFrame implements ActionListener{
-	JCheckBox c = new JCheckBox("A");
-	JLabel l = new JLabel("ここに結果を表示");
+	JCheckBox c;
+	JLabel l;
 
 	public void actionPerformed(ActionEvent e){
 		if(c.isSelected()){
@@ -28,6 +28,9 @@ public class Fukushu extends JFrame implements ActionListener{
 		JButton b = new JButton("おして");
 		b.addActionListener(this);
 
+
+		c = new JCheckBox("A");
+		l = new JLabel("");
 		JPanel p = new JPanel();
 		p.setLayout(new GridLayout(3,1));
 
