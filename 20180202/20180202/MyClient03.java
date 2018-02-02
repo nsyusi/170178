@@ -7,7 +7,7 @@ public class MyClient03 {
 	String message = "ALOHA";
 
 	try {
-	    Socket sock = new Socket(remotehost, 7);
+	    Socket sock = new Socket(remotehost, 5999);
 	    
 	    PrintWriter out = new PrintWriter(sock.getOutputStream());
 	    BufferedReader in = new BufferedReader(
