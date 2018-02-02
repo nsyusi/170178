@@ -1,27 +1,23 @@
-import java.net.*;
 import java.io.*;
+import java.net.*;
 
-public class MyClient03 {
-    public static void main(String[] args) {
-        String remotehost = "localhost";
-	String message = "ALOHA";
+public class MyClient03{
+	public static void main(String[] args){
+		Socket sock;
+		byte[] buff = new byte[1024];
+		InputStream is = null;
 
-	try {
-	    Socket sock = new Socket(remotehost, 5000);
-	    
-	    PrintWriter out = new PrintWriter(sock.getOutputStream());
-	    BufferedReader in = new BufferedReader(
-	                    new InputStreamReader(sock.getInputStream()));
+		try{
+			sock = new Socket(args[0],Integer.parseInt(args[1]));
+			is = sock.getInputStream();
 
-	    out.print(message + "\r\n");
-	    out.flush();
-	    String s = in.readLine();
-	    System.out.println(s);
-	    sock.close();
-	} catch (UnknownHostException e) {
-	    System.err.println(e);
-	} catch (IOException e) {
-	    System.err.println(e);
+			int n = is.read(buff);
+			System.out.write(buff,0,n);
+
+			sock.close();
+
+		}catch(Exception e){
+			System.out.print("エラー");
+		}
 	}
-    }
 }
