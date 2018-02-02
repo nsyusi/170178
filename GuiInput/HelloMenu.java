@@ -12,6 +12,10 @@ public void actionPerformed(ActionEvent e){
 		BufferedReader br = new BufferedReader(fr);
 
 		String textFromFile = br.readLine();
+		while(textFromFile !=null){
+			System.out.println(textFromFile);
+			textFromFile = br.readLine();
+		}
 		this.textArea.setText(textFromFile);
 	}catch(IOException ie){
 		System.out.println("失敗");
